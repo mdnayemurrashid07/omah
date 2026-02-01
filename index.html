@@ -1,44 +1,218 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./src/output.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omah - Real Estate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'omah-beige': '#F2F0E4',
+                        'omah-dark': '#1B242D',
+                        'omah-accent': '#D97706',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-  <header class="bg-[#EEEDDE]">
-    <nav>
-        <div class="container">
-            <div class="flex justify-between items-center">
-                <a href="#">
-                    <img src="./Images/Logo.png" alt="Logo">
+<body class="text-omah-dark antialiased">
+
+    <header class="bg-[#EEEDDE] px-6 md:px-20 pt-8 pb-20">
+        <nav class="flex justify-between items-center max-w-7xl mx-auto mb-16">
+            <div class="container max-w-[1164px] mx-auto flex justify-between items-center">
+                <div class="text-2xl font-bold flex items-center gap-1">
+                <a href="#">Omah</a>
+                </div>
+            <div class="flex space-x-20 text-sm font-semibold text-gray-600">
+                <a href="#" class="text-omah-dark border-b-2 border-omah-accent pb-1">Home</a>
+                <a href="#" class="hover:text-omah-dark">About</a>
+                <a href="#" class="hover:text-omah-dark">Properties</a>
+                <a href="#" class="hover:text-omah-dark">Contact</a>
+            </div>
+            </div>
+        </nav>
+
+        <div class="max-w-7xl mx-auto gap-12 flex items-center">
+            <div class="container  max-w-[1164px] mx-auto flex justify-between items-center">
+                <div>
+                <h1 class="text-5xl w-5/6 font-bold mb-6">
+                    Temukan Hunian Keluarga Sesuai Keinginanmu
+                </h1>
+                <p class="text-gray-500 mb-10 w-3/6">
+                    Menyediakan berbagai pilihan hunian keluarga dengan lokasi pilihan dan investasi yang strategis di kota-kota besar.
+                </p>
+                
+                <div class="bg-white p-2 rounded-xl shadow-xl shadow-gray-200/50 flex flex-col md:flex-row gap-2 max-w-xl">
+                    <div class="flex items-center px-4 flex-1 border-b md:border-b-0 md:border-r border-gray-100 py-2">
+                        <span class="mr-2 text-gray-400">📍</span>
+                        <input type="text" placeholder="Search location, properties,residental group" class="w-full outline-none text-sm">
+                    </div>
+                    <button class="bg-white hover:bg-gray-50 text-omah-dark font-bold py-3 px-8 rounded-lg border border-gray-200 transition">
+                        Search
+                    </button>
+                </div>
+            </div>
+            <div>
+                <div class="w-full">
+                    <img src="./Images/Banner.png"  alt="Banner">
+                </div>
+            </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-24 px-6 md:px-20 max-w-7xl mx-auto">
+        
+            <h2 class="text-3xl font-bold mb-16">
+            Tahapan Pembelian Properti <br> yang Mudah dan Cepat
+        </h2>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="border border-gray-100 p-10 rounded-2xl relative group hover:shadow-xl transition-shadow">
+                <span class="absolute top-6 right-6 text-sm font-bold text-orange-300">01</span>
+                <h3 class="font-bold text-lg mb-4">Pilih Properti</h3>
+                <p class="text-sm text-gray-400 leading-relaxed mb-8">
+                    Cari properti yang diinginkan lewat website kami dengan berbagai pilihan dan lokasi yang sangat strategis.
+                </p>
+                <a href="#" class="text-xs font-bold tracking-wider flex items-center group-hover:text-omah-accent">
+                    Baca lebih lanjut <span class="ml-2">→</span>
                 </a>
-                <ul class="flex gap-20">
-                    <li class=" relative after:content-[''] after:absolute  after:w-[60%] after:translate-x-[-50%] after:bottom-0  after:left-2/4 after:h-0.5 after:bg-red-500 "><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Properties</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
+            </div>
+            <div class="border border-gray-100 p-10 rounded-2xl relative group hover:shadow-xl transition-shadow">
+                <span class="absolute top-6 right-6 text-sm font-bold text-orange-300">02</span>
+                <h3 class="font-bold text-lg mb-4">Proses Booking</h3>
+                <p class="text-sm text-gray-400 leading-relaxed mb-8">
+                    Pembayaran tanda jadi untuk mengamankan unit yang sudah anda pilih melalui sistem transfer bank.
+                </p>
+                <a href="#" class="text-xs font-bold tracking-wider flex items-center group-hover:text-omah-accent">
+                    Baca lebih lanjut <span class="ml-2">→</span>
+                </a>
+            </div>
+            <div class="border border-gray-100 p-10 rounded-2xl relative group hover:shadow-xl transition-shadow">
+                <span class="absolute top-6 right-6 text-sm font-bold text-orange-300">03</span>
+                <h3 class="font-bold text-lg mb-4">KPR dan Sertifikasi</h3>
+                <p class="text-sm text-gray-400 leading-relaxed mb-8">
+                    Persetujuan KPR untuk anda yang ingin mencicil melalui bank terpilih dan pengurusan surat sertifikat.
+                </p>
+                <a href="#" class="text-xs font-bold tracking-wider flex items-center group-hover:text-omah-accent">
+                    Baca lebih lanjut <span class="ml-2">→</span>
+                </a>
             </div>
         </div>
-    </nav>
-    <div class="banner_part h-[720px] bg-[#EEEDDE]">
-    <div class="container">
-        <div class="flex justify-between items-center">
-            <div class="w-2/3">
-                <h1 class="text-5xl font-bold mb-6 text-[#203239]">Temukan Hunian Keluarga Sesuai Keinginanmu</h1>
-                <p class="mb-6">Menyediakan hunian bagi keluarga anda dengan varian pilihan dan lokasi yang strategis di kota anda dengan cara yang lebih mudah.</p>
-                <input type="text" placeholder="Search location,properties,residental group" class="p-4 w-3/6 bg-white rounded border border-white focus:outline-none">
-                <button class="bg-white text-[#2032398C] p-4 rounded hover:bg-red-600">Search</button>
+        
+    </section>
+
+    <section class="bg-[#EEEDDE] py-24 px-6 md:px-20 overflow-hidden">
+        <div class="container  max-w-[1164px] mx-auto flex justify-between items-center">
+            <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+            <div class="div">
+                <span class="text-xs font-bold text-omah-accent">Pilihan Konsumen</span>
+                <h1 class="text-2xl font-bold ">Residen Favorit</h1>
+                <div class="relative h-[500px] top-10">
+                <div class="absolute left-0 top-0 w-2/3 h-5/6">
+                    <img src="./Images/House.png" class="w-full h-full object-cover" alt="Exterior">
+                </div>
+                <div class="absolute right-0 bottom-0 w-2/3 h-5/6 ">
+                    <img src="./Images/Stairs.png" class="w-full h-full object-cover" alt="Interior">
+                </div>
             </div>
-            <div class="w-1/3">
-                <img src="./Images/Banner.png" alt="Banner Image">
+            </div>
+            <div>
+                <h2 class="text-3xl font-bold mt-4 mb-6 leading-tight">Bangunan yang dirancang oleh Arsitektur Handal</h2>
+                <p class="text-gray-500 mb-10 leading-relaxed">
+                    Setiap detail bangunan dirancang sedemikian rupa untuk kenyamanan penghuni, memberikan kesan estetis namun tetap mengedepankan fungsionalitas.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <button class="bg-white text-black px-8 py-4 rounded-xl font-bold  border border-black-500"> <i class="fa-solid fa-phone"></i> Hubungi Kami</button>
+                    <button class="bg-omah-dark text-white px-8 py-4 rounded-xl font-bold ">Eksplor lebih banyak</button>
+                </div>
             </div>
         </div>
-    </div>
-  </div>
-  </header>  
-  
+        </div>
+    </section>
+
+    <section class="py-24 px-6 md:px-20 max-w-7xl mx-auto">
+        <div class="mb-12">
+            <span class="text-xs font-bold text-omah-accent uppercase tracking-widest">Pilihan Auditor</span>
+            <h2 class="text-3xl font-bold mt-2">Residen Berbagai Kota</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="group cursor-pointer">
+                <div class="mb-6 h-[454px]">
+                    <img src="./Images/Image-5.jpg" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-xl mb-2">Magnolia Surabaya</h3>
+                <p class="text-gray-400 text-sm">Jl. Gatot Subroto No.KM.6,8, RT.001/RW.008, Jatake, Kec. Jatiuwung, Kota Tangerang, Banten 15136</p>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="rounded-2xl overflow-hidden mb-6 h-[454px]">
+                    <img src="./Images/Image-6.png" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-xl mb-2">Pinang Residences</h3>
+                <p class="text-gray-400 text-sm">Jl. Deplu Raya No.16 RT.5, RW.003Bintaro, Pesanggrahan, Jakarta Selatan 12330</p>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="mb-6 h-[454px]">
+                    <img src="./Images/Image-7.jpg" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-xl mb-2">South Grove</h3>
+                <p class="text-gray-400 text-sm">1 No.1, RT.1/RW.1, Lb. Bulus, Kec. Cilandak, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12440</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-omah-beige pt-20">
+        <div class="max-w-7xl mx-auto px-6 md:px-20 grid md:grid-cols-2 gap-12 pb-20">
+            <div>
+                <h2 class="text-3xl font-bold mb-10">Hubungi Kami</h2>
+                <div class="flex flex-col md:flex-row gap-6">
+                    <div class="bg-white p-6 rounded-2xl flex items-center gap-4 flex-1 shadow-sm">
+                        <div><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <p class="text-xs text-gray-400">Call</p>
+                            <p class="font-bold">+628123344755</p>
+                            <input type="button" value="Call Now" class="bg-[#203239] text-white px-4 py-2 rounded-lg mt-2">
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl flex items-center gap-4 flex-1 shadow-sm">
+                        <div><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <p class="text-xs text-gray-400">Call</p>
+                            <p class="font-bold">+628123344112</p>
+                            <input type="button" value="Call Now" class="bg-[#203239] text-white px-4 py-2 rounded-lg mt-2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-right">
+                <h3 class="text-[#203239] text-3xl font-bold mb-6 mr-10">Penghargaan</h3>
+                <a href="#">
+                    <img src="./Images/footer logo.png" class=" ml-[60%]" alt="Footer Logo">
+            </div>
+        </div>
+        
+        <div class="bg-[#203239]">
+            <div class="container max-w-[1164px] mx-auto flex justify-between items-center">
+                
+                <h1 class="text-white font-bold text-xl">Omah</h1>
+                <div class="flex gap-8 text-gray-400 text-sm">
+                    <a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i>Facebook</a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i>Twitter</a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
